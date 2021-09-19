@@ -1,0 +1,131 @@
+@charset "UTF-8";
+@font-face {
+	font-family: Karla;
+	src: url(Karla-VariableFont_wght.ttf);
+}
+:root {
+	--cyan: hsl(179, 62%, 43%);
+	--brightYellow: hsl(71, 73%, 54%);
+	--lightGray: hsl(204, 43%, 93%);
+	--grayishBlue: hsl(179, 47%, 52%);
+	--white: hsl(0deg, 0%, 100%);
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Karla;
+}
+body {
+	width: 100%;
+	height: 100vh;
+	background-color: var(--lightGray);
+	display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+	width: 50%;
+	height: 70%;
+	display: flex;
+	flex-wrap: wrap;
+	box-shadow: 0px 10px 20px 5px rgb(0 0 0 / 10%);
+	border-radius: 10px;
+  overflow: hidden;
+}
+.secOne {
+	width: 100%;
+	padding: 4%;
+	background-color: var(--white);
+  height: 50%;
+  font-weight: 800;
+}
+.secOne h1 {
+	padding: 0 0 5% 0;
+  color: var(--cyan);
+}
+.secOne div {
+	line-height: 25px;
+  color: hsl(185, 20%, 66%);
+}
+.secOne span {
+  padding-bottom: 1.5%;
+	display: block;
+	color: var(--brightYellow);
+}
+.secTwo {
+	width: 50%;
+	padding: 4% 7%;
+	display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+	background-color: var(--cyan);
+	color: var(--white);
+  height: 50%;
+}
+.secTwo div {
+	font-weight: 600;
+}
+.secTwo div:nth-child(2) {
+	font-size: 2em;
+}
+.secTwo div span {
+	font-size: .5em;
+	font-weight: 100;
+	color: var(--lightGray);
+}
+.secTwo div:nth-child(3) {
+	font-weight: 100;
+	color: var(--lightGray);
+  margin-bottom: 5%;
+}
+.secTwo button {
+	width: 100%;
+  height: 30%;
+	cursor:pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--brightYellow);
+  color: var(--white);
+  box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 20%);
+}
+.secThree {
+	width: 50%;
+	height: 50%;
+	padding: 4%;
+	background-color: var(--grayishBlue);
+	color: var(--lightGray);
+}
+.secThree h3 {
+	padding-bottom: 5%;
+}
+.secThree div {
+	width: 70%;
+  font-size: 15px;
+}
+
+@media (max-width: 375px) {
+	body {
+		height: auto;
+	}
+	.container {
+		height: auto;
+    margin: 10% 0;
+    width: 75%;
+	}
+	.secOne {
+		width: 100%;
+		height: 245px;
+	}
+	.secTwo {
+		width: 100%;
+		height: 225px;
+	}
+	.secThree {
+		width: 100%;
+		height: 190px;
+	}
+	.secTwo button {
+		height: 45px
+	}
+}
